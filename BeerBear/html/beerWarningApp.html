@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>warning page</title>
+
+  
+  <link rel="stylesheet" href="../css/animate.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Bungee+Shade|Londrina+Outline|Londrina+Shadow" rel="stylesheet">
+  <link href="../css/hover.css" rel="stylesheet" media="all">
+  <link rel="stylesheet" href="../css/beerWarningApp.css">
+
+</head>
+<body >
+
+  <div id="video_wrap">
+    <video id="backgroundVideo" muted autoplay loop>
+      <source type="video/mp4" src="../video/warning_movie.mp4">
+    </video>
+  </div>
+  
+  <div id="main_wrap">
+  
+    <div id="opacity_wrap"></div>
+  
+    <div id="warning_wrap" >
+      <div id="message">
+        <h1 class="message animated bounce">Hello!<br>
+        ARE YOU OF LEGAL DRIKING AGE?</h1>
+        <h4 class="message animated bounce small">대한민국은 만 19세 이상만 이용 가능합니다.</h4>
+      </div>
+      
+      <div id="answer">
+        
+        <a href="#" id = "yesBtn" class="hvr-shutter-out-horizontal">Yes</a>
+        
+        <a href="#" id = "noBtn" class="hvr-shutter-out-horizontal">No</a>
+        
+      </div>
+    
+    </div>
+
+  </div>
+  
+  
+  <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+  
+  <script>
+	   "use strict"
+	   var yesBtn= document.querySelector("#yesBtn")
+	   
+	   yesBtn.onclick = function(event) {
+	     window.location.href="../html/beerMainApp.html"
+	   }
+	   
+	   var noBtn = document.querySelector("#noBtn")
+	   var message = document.querySelector("#warning_wrap")
+	   var opacity = document.querySelector("#opacity_wrap")
+	   
+	   noBtn.onclick = function(event) {
+	     message.style["display"] ="none"
+	     opacity.style["display"] = "none"
+	   }
+     
+  </script>
+  
+
+
+</body>
+</html>
